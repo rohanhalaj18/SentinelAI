@@ -1,0 +1,86 @@
+# =========================
+# 🔥 NODE MODULES
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# 🔐 ENV FILES (SECRETS)
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# 🗂️ LOG FILES
+# =========================
+logs/
+*.log
+
+# =========================
+# 📦 BUILD / DIST
+# =========================
+dist/
+build/
+out/
+
+# =========================
+# 💻 OS FILES
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# 🧠 PYTHON (AI SERVICE)
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# =========================
+# 📸 UPLOADS / MEDIA
+# =========================
+uploads/
+*.mp4
+*.avi
+*.mov
+*.jpg
+*.png
+
+# =========================
+# 🧪 TEST / COVERAGE
+# =========================
+coverage/
+.nyc_output/
+
+# =========================
+# ⚙️ IDE FILES
+# =========================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =========================
+# 🚀 DEPLOYMENT
+# =========================
+.vercel
+.render
+.netlify
+
+# =========================
+# 🧩 MISC
+# =========================
+*.pid
+*.seed
+*.lock

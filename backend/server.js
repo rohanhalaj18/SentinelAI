@@ -42,6 +42,7 @@ app.post("/alert", (req, res) => {
     severity,
     time: new Date().toLocaleTimeString(),
   });
+  console.log("received alert", alert);
 
   res.json({ status: "received" });
 });

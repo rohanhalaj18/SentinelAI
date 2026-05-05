@@ -31,9 +31,19 @@ io.on("connection", (socket) => {
 //alert endpoint
 app.post("/alert", (req, res) => {
   const alert = req.body;
-  console.log("🚨 Alert received:", alert);
-  io.emit("alert", alert);
-  res.json({ message: "Alert received" });
+
+  let severity = "LOW";
+
+  if (alert.type === "fight") severity = "HIGH";
+  if (alert.type === "knife") severity = "CRITICAL";
+
+  io.emit("newAlert", {
+    ...alert,
+    severity,
+    time: new Date().toLocaleTimeString(),
+  });
+
+  res.json({ status: "received" });
 });
 
 server.listen(5000, () => {
